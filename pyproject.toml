@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "kalman"
+version = "0.1.0"
+description = ""
+authors = ["shuns0314 <shunsuke.naka0314@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.4.2"
+pandas = "^1.2.4"
+tensorflow-probability = "0.11.1"
+tensorflow = "2.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+notebook = "^6.4.0"
+black = "^21.6b0"
+mypy = "^0.902"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | venv
+)
+'''
